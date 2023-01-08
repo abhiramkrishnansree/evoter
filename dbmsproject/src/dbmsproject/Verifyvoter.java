@@ -153,7 +153,9 @@ public class Verifyvoter extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-               String sql="select * from voters where voterid =? and mobile=?" ;
+               String voterId = votid.getText();
+               String sql = "select * from voters where voterid =? and mobile=? and flag=0;";
+        
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
@@ -164,6 +166,11 @@ public class Verifyvoter extends javax.swing.JFrame {
             ResultSet rs= pstmt.executeQuery();
             if(rs.next())
             {
+                  String updateSql = "UPDATE voters SET flag = flag + 1 WHERE voterid =  ?;";
+                   PreparedStatement updateStatement = conn.prepareStatement(updateSql);
+                   updateStatement.setString(1, voterId);
+                   int result = updateStatement.executeUpdate();
+                   
                   JOptionPane.showMessageDialog(null, "welcome"+votid.getText(),"successful login",JOptionPane.PLAIN_MESSAGE);
                   this.dispose();
                   new Chairman().setVisible(true);
