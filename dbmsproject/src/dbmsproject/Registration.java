@@ -178,7 +178,7 @@ public class Registration extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"registration successful");
             conn.close();
             this.dispose();
-            new page2().setVisible(true);
+            new Option().setVisible(true);
             
          }  
          catch(Exception e)

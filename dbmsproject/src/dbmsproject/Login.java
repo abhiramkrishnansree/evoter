@@ -160,7 +160,7 @@ public class Login extends javax.swing.JFrame {
             {
                   JOptionPane.showMessageDialog(null, "welcome"+use.getText(),"successful login",JOptionPane.PLAIN_MESSAGE);
                   this.dispose();
-                  new page2().setVisible(true);
+                  new Option().setVisible(true);
             }
             else
             {
