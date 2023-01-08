@@ -116,6 +116,8 @@ public class Verifyvoter extends javax.swing.JFrame {
                 .addGap(82, 82, 82))
         );
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/verify.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
