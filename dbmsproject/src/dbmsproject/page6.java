@@ -4,6 +4,11 @@
  */
 package dbmsproject;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nandi
@@ -103,15 +108,49 @@ public class page6 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         this.dispose();
+         try{
+            Class.forName("com.mysql.jdbc.Driver");
+        
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
+            String sql ="update leader_database set Vote=Vote+1 where candidate='Candidate1'";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            
+           pstmt.executeUpdate();
+            JOptionPane.showMessageDialog(null,"voting successful");
+            conn.close();
+        
+        this.dispose();
             new page7().setVisible(true);
                     // TODO add your handling code here:
+    }                                        
+   catch(Exception e)
+         {
+             JOptionPane.showMessageDialog(null, e);
+         }
+    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-              this.dispose();
+             try{
+            Class.forName("com.mysql.jdbc.Driver");
+        
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
+            String sql ="update leader_database set Vote=Vote+1 where candidate='Candidate2'";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            
+           pstmt.executeUpdate();
+            JOptionPane.showMessageDialog(null,"voting successful");
+            conn.close();
+        
+        this.dispose();
             new page7().setVisible(true);
                     // TODO add your handling code here:
+    }                                        
+   catch(Exception e)
+         {
+             JOptionPane.showMessageDialog(null, e);
+         }
+    
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
