@@ -168,7 +168,7 @@ public class Registration extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
      try{
         Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
             String sql ="insert into users values(?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1,username.getText());

@@ -178,8 +178,8 @@ public class Chairman extends javax.swing.JFrame {
         try{
             Class.forName("com.mysql.jdbc.Driver");
         
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
-            String sql ="update voting_database set Vote=Vote+1 where candidate='Candidate3'";
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            String sql ="update voting_database set vote=vote+1 where candidate='Candidate3'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             
            pstmt.executeUpdate();
@@ -201,8 +201,8 @@ public class Chairman extends javax.swing.JFrame {
         try{
             Class.forName("com.mysql.jdbc.Driver");
         
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
-            String sql ="update voting_database set Vote=Vote+1 where candidate='Candidate1'";
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            String sql ="update voting_database set vote=vote+1 where candidate='Candidate1'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             
            pstmt.executeUpdate();
@@ -222,8 +222,8 @@ public class Chairman extends javax.swing.JFrame {
          try{
             Class.forName("com.mysql.jdbc.Driver");
         
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
-            String sql ="update voting_database set Vote=Vote+1 where candidate='Candidate2'";
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            String sql ="update voting_database set vote=vote+1 where candidate='Candidate2'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             
            pstmt.executeUpdate();
