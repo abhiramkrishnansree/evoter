@@ -160,7 +160,7 @@ public class Verifyvoter extends javax.swing.JFrame {
         
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            Connection conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1,votid.getText());
             pstmt.setInt(2,Integer.parseInt(phone.getText()));

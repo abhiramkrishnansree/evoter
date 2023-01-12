@@ -163,7 +163,7 @@ public class Leader extends javax.swing.JFrame {
          try{
             Class.forName("com.mysql.jdbc.Driver");
         
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
             String sql ="update leader_database set vote=vote+1 where candidate='Candidate1'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             
@@ -186,7 +186,7 @@ public class Leader extends javax.swing.JFrame {
              try{
             Class.forName("com.mysql.jdbc.Driver");
         
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
             String sql ="update leader_database set vote=vote+1 where candidate='Candidate2'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             

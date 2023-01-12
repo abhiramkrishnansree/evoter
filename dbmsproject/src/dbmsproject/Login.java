@@ -159,7 +159,7 @@ public class Login extends javax.swing.JFrame {
            String sql="select name,phone from users where name =? and pass=?" ;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1,use.getText());
             pstmt.setString(2,new String(pass.getPassword()));

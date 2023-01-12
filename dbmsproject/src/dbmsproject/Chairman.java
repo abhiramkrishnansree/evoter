@@ -137,9 +137,9 @@ public class Chairman extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -201,7 +201,7 @@ public class Chairman extends javax.swing.JFrame {
         try{
             Class.forName("com.mysql.jdbc.Driver");
         
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
             String sql ="update voting_database set vote=vote+1 where candidate='Candidate3'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             
@@ -224,7 +224,7 @@ public class Chairman extends javax.swing.JFrame {
         try{
             Class.forName("com.mysql.jdbc.Driver");
         
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
             String sql ="update voting_database set vote=vote+1 where candidate='Candidate1'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             
@@ -245,7 +245,7 @@ public class Chairman extends javax.swing.JFrame {
          try{
             Class.forName("com.mysql.jdbc.Driver");
         
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
             String sql ="update voting_database set vote=vote+1 where candidate='Candidate2'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             

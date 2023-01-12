@@ -43,7 +43,7 @@ public class Success extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\abhir\\Downloads\\voter2.gif")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/voter2.gif"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Gilroy ExtraBold", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 255));

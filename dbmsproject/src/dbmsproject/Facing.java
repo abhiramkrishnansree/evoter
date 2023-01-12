@@ -40,9 +40,10 @@ public class Facing extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\abhir\\OneDrive\\Desktop\\newlogo.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/newlogo.png"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\abhir\\OneDrive\\Desktop\\gif\\urban-online-voting.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/urban-online-voting.png"))); // NOI18N
+        jLabel2.setToolTipText("");
 
         jLabel3.setFont(new java.awt.Font("Gilroy ExtraBold", 0, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));

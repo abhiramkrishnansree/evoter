@@ -26,7 +26,7 @@ public class result2 extends javax.swing.JFrame {
    {
        try{
            Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+           Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
            String sql3="select candidate ,vote from voting_database order by vote desc";
           // String sql3="select transid,pname,from1,dest,fare,inputdate from bookings,bus where bus.bus_id=bookings.bus_id and username=?";
            PreparedStatement pstmt3 = conn.prepareStatement(sql3);
@@ -43,7 +43,7 @@ public class result2 extends javax.swing.JFrame {
    {
        try{
            Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evote", "root", "nandu");
+           Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
            String sql3="select candidate ,vote from leader_database order by vote desc";
           // String sql3="select transid,pname,from1,dest,fare,inputdate from bookings,bus where bus.bus_id=bookings.bus_id and username=?";
            PreparedStatement pstmt3 = conn.prepareStatement(sql3);
@@ -190,10 +190,11 @@ public class result2 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 405, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
